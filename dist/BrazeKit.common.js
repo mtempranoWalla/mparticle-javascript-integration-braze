@@ -9879,6 +9879,8 @@ var constructor = function () {
         }
         // eslint-disable-line no-unused-vars
         mpCustomFlags = customFlags;
+        debugger;
+        console.log('FORWARDER SETTINGS ', forwarderSettings );
         try {
             forwarderSettings = settings;
             bundleCommerceEventData =
@@ -9894,6 +9896,9 @@ var constructor = function () {
                 forwarderSettings.enableHtmlInAppMessages == 'True';
             options.doNotLoadFontAwesome =
                 forwarderSettings.doNotLoadFontAwesome == 'True';
+            options.minimumIntervalBetweenTriggerActionsInSeconds =
+                forwarderSettings.minimumIntervalBetweenTriggerActionsInSeconds || 5;
+            options.allowUserSuppliedJavascript = true;
 
             if (forwarderSettings.safariWebsitePushId) {
                 options.safariWebsitePushId =
